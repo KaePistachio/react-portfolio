@@ -1,5 +1,6 @@
 import React from "react";
 import image from "./palace-bowl.jpeg";
+import Typed from "react-typed";
 
 export default function Home() {
   return (
@@ -7,13 +8,20 @@ export default function Home() {
       <img 
         src={image} 
         alt="Crystal Palace Bowl" 
-        className="absolute object-cover w-full h-full"
+        className="home-bg"
       />
-      <section className="relative flex justify-center min-h-screen pt-12 lg:pt-64 px-8">
-        <h1 className="text-1xl text-center text-indigo-200 font-bold cursive leading-snug lg:leading-snug home-name">
+      <section className="home-title">
+        <h1 className="home-title-text cursive">
           Hey. I'm Nick
         </h1>
       </section>
+      <div className="type-div">
+          <Typed
+            className="type-fx mono"
+            strings={["Aspiring Web Dev", "Guitar Hero", "Mortal Kombat Champion"]}
+            loop
+          />
+        </div>
     </main>
   )
 }

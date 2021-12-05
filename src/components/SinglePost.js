@@ -37,21 +37,21 @@ export default function SinglePost() {
   if (!singlePost) return <div>Loading...</div>;
   
   return (
-    <main className="bg-gray-200 min-h-screen p-12">
-      <article className="container shadow-lg mx-auto bg-green-100 rounded-lg">
-        <header className="relative">
-          <div className="absolute h-full w-full flex items-center justify-center p-8">
-            <div className="bg-white bg-opacity-75 rounded p-12">
-              <h1 className="cursive text-3xl lg:text-6xl mb-4">
+    <main className="post-bg">
+      <article className="post-text-container">
+        <header className="post-header">
+          <div className="post-div">
+            <div className="post-title-div">
+              <h1 className="post-title-text cursive">
                 { singlePost.title }
               </h1> 
-              <div className="flex justify-center text-gray-800">
+              <div className="author-div">
                 <img 
                   src={ urlFor(singlePost.authorImage).url() }
                   alt={ singlePost.name }
-                  className="w-10 h-10 rounded-full"
+                  className="author-thumbnail"
                 />
-                <p className="cursive flex items-center pl-2 text-2xl">
+                <p className="author-name cursive">
                   { singlePost.name }
                 </p>
               </div>
@@ -60,15 +60,13 @@ export default function SinglePost() {
           <img 
             src={ singlePost.mainImage.asset.url }
             alt={ singlePost.title }
-            className="w-full object-cover rounded-t"
+            className="post-image"
             style={{ height: "400px" }}
           />
         </header>
-        <div className="px-12 lg:px-48 y-12 lg:py-20 prose lg:prose-xl max-w-full">
+        <div className="post-body-text standard prose">
           <BlockContent 
             blocks={ singlePost.body }
-            projectId="k3nabdae"
-            dataset="production"
           />
         </div>
       </article>

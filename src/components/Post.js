@@ -23,7 +23,7 @@ export default function Post() {
       .catch(console.error);
   }, []);
   return (
-    <main className="bg-green-100 min-h-screen p-12">
+    <main className="blog-bg">
       <section className="container mx-auto">
         <h1 className="text-5xl flex justify-center cursive">
           Blog Posts Page

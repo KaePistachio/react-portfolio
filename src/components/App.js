@@ -5,6 +5,7 @@ import SinglePost from "./SinglePost";
 import Post from "./Post";
 import Project from "./Project";
 import NavBar from "./NavBar";
+import ContactMe from "./ContactMe";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path='/post/:slug' element={ <SinglePost /> } />
         <Route path='/post' element={ <Post /> } />
         <Route path='/project' element={ <Project /> } exact />
+        <Route path='/contact' element={ <ContactMe /> } exact />
       </Routes>
     </Router>
   );
