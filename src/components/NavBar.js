@@ -1,12 +1,33 @@
-import React from "react";
+import React, { useState }from "react";
 import { NavLink } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
+import { FiMenu } from "react-icons/fi";
+import { AiOutlineCloseSquare } from "react-icons/ai";
+import DropdownMenu from "./DropdownMenu";
 
-export default function NavBar() {
+export default function NavBar() {  
+  const [ menuOpen, setMenuOpen ] = useState(false);
+
+  const hamburgerIcon = 
+  <FiMenu 
+    className="hamburger"
+    size="45px"
+    onClick={() => setMenuOpen(!menuOpen)}
+  />;
+
+  const closeIcon = 
+    <AiOutlineCloseSquare 
+      className="close"
+      size="45px"
+      onClick={() => setMenuOpen(!menuOpen)}
+    />; 
+
+  const closeDropdown = () => setMenuOpen(false);
+
   return (
     <header className="nav-main">
       <div className="nav-container">
-        <nav className="nav">
+        <nav className="nav-large">
           <NavLink 
             to='/' 
             exact
@@ -39,6 +60,17 @@ export default function NavBar() {
             Contact
           </NavLink>
         </nav>
+        <nav className="nav-small">
+          <NavLink 
+            to='/' 
+            exact
+            className="navlink-src cursive"
+          >
+            KayPee
+          </NavLink>
+          { menuOpen ? closeIcon : hamburgerIcon }
+          { menuOpen && DropdownMenu }
+        </nav>
         <div className="nav-social">
           <SocialIcon 
             url="https://www.linkedin.com/in/nickwhitedev/" 
@@ -60,6 +92,10 @@ export default function NavBar() {
           />
         </div>
       </div>
+      { menuOpen && <DropdownMenu
+                      isMobile={true}
+                      closeDropdown={closeDropdown}
+                    /> }
     </header>
   )
 }

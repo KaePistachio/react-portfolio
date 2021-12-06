@@ -21,18 +21,18 @@ export default function Project() {
   }, []);
 
   return (
-    <main className="bg-green-100 min-h-screen p-12">
-      <section className="container mx-auto">
-        <h1 className="text-5xl text-indigo-900 flex justify-center cursive">
+    <main className="projects-main">
+      <section className="projects-container">
+        <h1 className="projects-title cursive">
           Welcome To My Projects Page
         </h1>
-        <h2 className="text-lg text-indigo-900 flex justify-center mb-12 cursive">
+        <h2 className="projects-desc cursive">
           Here are some of my most recent projects I have completed
         </h2>
-        <section className="grid grid-cols-2 gap-8">
+        <section className="projects-grid">
           { projectData && projectData.map((project, index) => (
-          <article className="relative rounded-lg shadow-xl bg-white p-16">
-            <h3 className="text-indigo-600 text-3xl font-bold mb-2 hover:text-green-300">
+          <article className="project-article">
+            <h3 className="project-title">
               <a
                 href={project.link}
                 alt={project.title}
@@ -42,24 +42,24 @@ export default function Project() {
                 {project.title}
               </a>
             </h3>
-            <div className="text-indigo-400 text-xs space-x-4">
-              <span>
+            <div className="project-details">
+              <span className="project-span">
                 <strong className="font-bold">Finished On</strong>:{" "}
                 { new Date(project.date).toLocaleDateString() }
               </span>
-              <span>
+              <span className="project-span">
               <strong className="font-bold">Company</strong>:{" "}
                 { project.place }
               </span>
-              <span>
+              <span className="project-span">
                 <strong className="font-bold">Type</strong>{" "}
                 { project.projectType }
               </span>
-              <p className="my-6 text-lg text-gray-700 leading-relaxed">
+              <p className="project-desc">
                 { project.description }
               </p>
               <a 
-                className="text-indigo-300 text-xl font-bold hover:underline hover:text-green-300"
+                className="project-link"
                 href={ project.link }
                 rel="noopener noreferrer" 
                 target="_blank"

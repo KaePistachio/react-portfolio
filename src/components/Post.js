@@ -24,14 +24,14 @@ export default function Post() {
   }, []);
   return (
     <main className="blog-bg">
-      <section className="container mx-auto">
-        <h1 className="text-5xl flex justify-center cursive">
+      <section className="blog-container">
+        <h1 className="blog-header cursive">
           Blog Posts Page
         </h1>
-        <h2 className="text-lg text-gray-600 flex justify-center mb-12">
+        <h2 className="blog-subheader">
           Welcome to my brand new blog
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="blog-posts-div">
           { postData && postData.map((post, index) => (
             <article>
               <Link 
@@ -39,16 +39,16 @@ export default function Post() {
                 key={post.slug.current}
               >
                 <span 
-                  className="block h-64 relative rounded shadow leading-snug bg-white border-l-8 border-green-400"
+                  className="blog-post"
                   key={index}
                 >
                   <img 
                     src={post.mainImage.asset.url}
                     alt={post.mainImage.alt}
-                    className="w-full h-full rounded-r object-cover absolute"
+                    className="blog-post-image"
                   />
-                  <span className="block relative h-full flex justify-end items-end pr-4 pd-4">
-                    <h3 className="text-gray-800 text-lg font-blog px-3 py-4 bg-red-700 text-red-100 bg-opacity-75 rounded">
+                  <span className="blog-title-container">
+                    <h3 className="blog-title cursive">
                       { post.title }
                     </h3>
                   </span>
