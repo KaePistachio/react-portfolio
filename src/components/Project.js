@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import sanityClient from "../client.js";
+import image from "./palace-bowl.jpeg";
 
 export default function Project() {
   const [ projectData, setProjectData ] = useState(null);
@@ -21,8 +22,14 @@ export default function Project() {
   }, []);
 
   return (
-    <main className="projects-main">
-      <section className="projects-container">
+    <main>
+      <img 
+        src={image} 
+        alt="Crystal Palace Door"
+        className="projects-bg" />
+      <div className="projects-layer">
+      </div>
+      <section className="projects-section">
         <h1 className="projects-title cursive">
           Welcome To My Projects Page
         </h1>
@@ -32,7 +39,7 @@ export default function Project() {
         <section className="projects-grid">
           { projectData && projectData.map((project, index) => (
           <article className="project-article">
-            <h3 className="project-title">
+            <h3 className="project-title cursive">
               <a
                 href={project.link}
                 alt={project.title}
