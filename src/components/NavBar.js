@@ -74,21 +74,15 @@ export default function NavBar() {
         <div className="nav-social">
           <SocialIcon 
             url="https://www.linkedin.com/in/nickwhitedev/" 
-            className="mr-4" 
+            className="icon mr-4" 
             target="_blank" 
             fgColor="#fff" style={{ height: 35, width: 35 }}
           />
           <SocialIcon 
             url="https://github.com/KaePistachio" 
-            className="mr-4" 
+            className="icon mr-4" 
             target="_blank" 
             fgColor="#fff" style={{ height: 35, width: 35 }}
-          />
-          <SocialIcon 
-            url="https://twitter.com/FgcPistachio" 
-            className="mr-4" 
-            target="_blank" 
-            fgColor="#fff" style={{ height: 35, width: 35 }}          
           />
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
-import image from "./palace-bowl.jpeg";
 import Typed from "react-typed";
+import image from "./palace-bowl.jpeg";
 
 export default function Home() {
   return (

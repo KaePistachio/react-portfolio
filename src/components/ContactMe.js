@@ -1,5 +1,6 @@
 import React from "react";
 import emailjs from "emailjs-com";
+import image from "./palace-bowl.jpeg";
 
 const ContactMe = () => {
   const serviceId = "nwdevpassthrough";
@@ -20,6 +21,11 @@ const ContactMe = () => {
 
   return (
     <main className="contact-bg">
+      <img 
+        className="contact-bg"
+        src={image}
+        alt="crystal Palace Bowl"
+      />
       <article className="contact-me">
         <div className="contact-header">
           <h1 className="cursive">
@@ -30,42 +36,54 @@ const ContactMe = () => {
             Thanks!
           </p>
         </div>
-        <div className="contact-form-container">
-            <form onSubmit={sendEmail} >
-            <input 
-              className="contact-input"
-              placeholder="Name"
-              name="name"
-              required
-            />
-            <input 
-              className="contact-input"
-              placeholder="Email Address"
-              name="email"
-              required
-            />
-            <input 
-              className="contact-input"
-              placeholder="Phone Number"
-              name="number"
-            />
-            <input 
-              className="contact-input"
-              placeholder="Subject"
-              name="subject"
-            />
-            <textarea
-              className="contact-body"
-              placeholder=""
-              name="body"
-            />
-            <button 
-              type="submit"
-              className="contact-button">
-              Submit
-            </button>
-            </form>
-        </div>
+            <div className="contact-grid">
+              <form onSubmit={sendEmail} >
+              <div className="grid-1">
+              <input 
+                className="contact-input"
+                placeholder="Name *"
+                name="name"
+                required
+              />
+              </div>
+              <div className="grid-2">
+              <input 
+                className="contact-input"
+                placeholder="Email Address *"
+                name="email"
+                required
+              />
+              </div>
+              <div className="grid-3">
+              <input 
+                className="contact-input"
+                placeholder="Phone Number"
+                name="number"
+              />
+              </div>
+              <div className="grid-4">
+              <input 
+                className="contact-input"
+                placeholder="Subject *"
+                name="subject"
+              />
+              </div>
+              <div className="grid-5">
+              <textarea
+                className="contact-body"
+                placeholder="Please enter your query here..."
+                name="body"
+              />
+              </div>
+              <div className="grid-6">
+              <button 
+                type="submit"
+                className="contact-button">
+                Submit
+              </button>
+              </div>
+              </form>
+            </div>
       </article>
     </main>
 
