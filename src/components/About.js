@@ -28,12 +28,14 @@ export default function About() {
   if (!author) return <div>Loading...</div>;
 
   return (
-    <main>
+    <main className="bg">
       <img 
         src={ palaceBowl }
         alt="Crystal Palace Bowl"
         className="about-bg"
       />
+      <div className="bg-layer winter">
+      </div>
       <div className="about-div">
         <section className="about-container">
           <img 
@@ -42,14 +44,14 @@ export default function About() {
             className="about-img"
           />
           <div className="bio-div">
-            <h1 className="bio-title cursive"> 
+            <h1 className="bio-title mono-title"> 
               Hey there, I'm{" "}
               <span>
                 { author.name }
               </span>
             </h1>
-            <div className="about-bio prose standard">
-              <BlockContent 
+            <div className="about-bio prose mono">
+              <BlockContent
                 blocks={ author.bio }
                 projectId="k3nabdae"
                 dataset="production"

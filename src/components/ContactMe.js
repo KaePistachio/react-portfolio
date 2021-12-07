@@ -20,37 +20,45 @@ const ContactMe = () => {
   };
 
   return (
-    <main className="contact-bg">
+    <main className="bg">
       <img 
-        className="contact-bg"
+        className="bg"
         src={image}
         alt="crystal Palace Bowl"
       />
-      <article className="contact-me">
-        <div className="contact-header">
-          <h1 className="cursive">
+      <div className="bg-layer summer">
+      </div>
+      <article className="contact-me mono">
+        <div>
+          <h1 className="contact-header mono-title">
             Contact Me
           </h1>
-          <p>
-            Please fill out the contact form with any requests or needs and I will get back to you ASAP.<br />
-            Thanks!
+          <p className="contact-desc mono">
+            {`Please fill out the contact form with any requests or needs and I will get back to you ASAP. Thanks! <3`}
           </p>
         </div>
-            <div className="contact-grid">
-              <form onSubmit={sendEmail} >
+            <form
+               className="contact-grid"
+               onSubmit={sendEmail} 
+               autoComplete="new-password"
+            >
               <div className="grid-1">
               <input 
                 className="contact-input"
-                placeholder="Name *"
-                name="name"
+                placeholder="Name*"
+                name="name" 
+                size="28"
+                autoComplete="new-password"
                 required
               />
               </div>
               <div className="grid-2">
               <input 
                 className="contact-input"
-                placeholder="Email Address *"
+                placeholder="Email Address*"
+                size="28"
                 name="email"
+                autoComplete="new-password"
                 required
               />
               </div>
@@ -58,19 +66,23 @@ const ContactMe = () => {
               <input 
                 className="contact-input"
                 placeholder="Phone Number"
+                size="28"
+                autoComplete="new-password"
                 name="number"
               />
               </div>
               <div className="grid-4">
               <input 
                 className="contact-input"
-                placeholder="Subject *"
+                placeholder="Subject*"
+                size="28"
+                autoComplete="new-password"
                 name="subject"
               />
               </div>
               <div className="grid-5">
               <textarea
-                className="contact-body"
+                className="contact-body grid 5"
                 placeholder="Please enter your query here..."
                 name="body"
               />
@@ -79,11 +91,10 @@ const ContactMe = () => {
               <button 
                 type="submit"
                 className="contact-button">
-                Submit
+                {`Submit >>>`}
               </button>
               </div>
-              </form>
-            </div>
+            </form>
       </article>
     </main>
 

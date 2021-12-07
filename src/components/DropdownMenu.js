@@ -19,7 +19,7 @@ const DropdownMenu = (props) => {
           animate={animateTo}
           transition={{delay: 0.10}}
           onClick={() => props.isMobile && props.closeDropdown()}
-          className="nav-li serif"
+          className="nav-li mono"
         >
           <a href="/post">Blog Posts</a>
         </motion.li>
@@ -28,7 +28,7 @@ const DropdownMenu = (props) => {
           animate={animateTo}
           transition={{delay: 0.20}}
           onClick={() => props.isMobile && props.closeDropdown()}
-          className="nav-li serif"
+          className="nav-li mono"
         >
           <a href="/project">Projects</a>
         </motion.li>
@@ -37,7 +37,7 @@ const DropdownMenu = (props) => {
           animate={animateTo}
           transition={{delay: 0.30}}
           onClick={() => props.isMobile && props.closeDropdown()}
-          className="nav-li serif"
+          className="nav-li mono"
         >
           <a href="/about">About Me</a>
         </motion.li>
@@ -46,7 +46,7 @@ const DropdownMenu = (props) => {
           animate={animateTo}
           transition={{delay: 0.40}}
           onClick={() => props.isMobile && props.closeDropdown()}
-          className="nav-li serif"
+          className="nav-li mono"
         >
           <a href="/contact">Contact</a>
         </motion.li>

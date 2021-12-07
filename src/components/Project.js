@@ -22,20 +22,23 @@ export default function Project() {
   }, []);
 
   return (
-    <main>
+    <main className="projects-bg">
       <img 
         src={image} 
         alt="Crystal Palace Door"
-        className="projects-bg" />
-      <div className="projects-layer">
+        className="projects-bg" 
+      />
+      <div className="bg-layer autumn">
       </div>
       <section className="projects-section">
         <h1 className="projects-title cursive">
           Welcome To My Projects Page
         </h1>
-        <h2 className="projects-desc cursive">
+        <div className="projects-desc-div">
+        <h2 className="projects-desc mono">
           Here are some of my most recent projects I have completed
         </h2>
+        </div>
         <section className="projects-grid">
           { projectData && projectData.map((project, index) => (
           <article className="project-article">
@@ -49,7 +52,7 @@ export default function Project() {
                 {project.title}
               </a>
             </h3>
-            <div className="project-details">
+            <div className="project-details mono">
               <span className="project-span">
                 <strong className="font-bold">Finished On</strong>:{" "}
                 { new Date(project.date).toLocaleDateString() }
@@ -65,17 +68,16 @@ export default function Project() {
               <p className="project-desc">
                 { project.description }
               </p>
+              <div className="project-link-div">
               <a 
-                className="project-link"
+                className="project-link mono"
                 href={ project.link }
                 rel="noopener noreferrer" 
                 target="_blank"
               >
-                View Project{" "}
-                <span role="img" aria-label="right pointer">
-                  👉🏻 
-                </span>
+                View Project {`>>>`}
               </a>
+              </div>
             </div>
           </article>
           ))}

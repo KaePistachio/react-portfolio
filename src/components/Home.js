@@ -10,18 +10,19 @@ export default function Home() {
         alt="Crystal Palace Bowl" 
         className="home-bg"
       />
+      <div className="bg-layer spring"></div>
       <section className="home-title">
         <h1 className="home-title-text cursive">
           Hey. I'm Nick
         </h1>
       </section>
       <div className="type-div">
-          <Typed
-            className="type-fx mono"
-            strings={["Aspiring Web Dev", "Guitar Hero", "Mortal Kombat Champion"]}
-            loop
-          />
-        </div>
+        <Typed
+          className="type-fx mono-title"
+          strings={["Aspiring Web Dev", "Guitar Hero", "Mortal Kombat Champion"]}
+          loop
+        />
+      </div>
     </main>
   )
 }

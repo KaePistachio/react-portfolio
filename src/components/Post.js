@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import sanityClient from "../client.js";
+import image from "./palace-bowl.jpeg";
 
 export default function Post() {
   const [ postData, setPost ] = useState(null);
@@ -23,14 +24,23 @@ export default function Post() {
       .catch(console.error);
   }, []);
   return (
-    <main className="blog-bg">
-      <section className="blog-container">
-        <h1 className="blog-header cursive">
+    <main className="projects-bg">
+      <img 
+        src={ image }
+        alt="Crystal Palace Bowl"
+        className="projects-bg"
+      />
+      <div className="bg-layer twilight"></div>
+      <section className="blog-section">
+        <h1 className="blogs-title cursive">
           Blog Posts Page
         </h1>
-        <h2 className="blog-subheader">
+        <div className="blogs-desc-div">
+        <h2 className="blogs-desc mono">
           Welcome to my brand new blog
         </h2>
+        </div>
+        <section>
         <div className="blog-posts-div">
           { postData && postData.map((post, index) => (
             <article>
@@ -48,7 +58,7 @@ export default function Post() {
                     className="blog-post-image"
                   />
                   <span className="blog-title-container">
-                    <h3 className="blog-title cursive">
+                    <h3 className="blog-title mono">
                       { post.title }
                     </h3>
                   </span>
@@ -57,6 +67,8 @@ export default function Post() {
             </article>
           ))}
         </div>
+        </section>
+          
       </section>
     </main>
   )

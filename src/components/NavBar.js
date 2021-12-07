@@ -37,25 +37,25 @@ export default function NavBar() {
           </NavLink>
           <NavLink 
             to="/post"
-            className="navlink serif"
+            className="navlink mono"
           >
             Blog Posts
           </NavLink>
           <NavLink 
             to="/project"
-            className="navlink serif"
+            className="navlink mono"
           >
             Projects
           </NavLink>
           <NavLink 
             to="/about"
-            className="navlink serif"
+            className="navlink mono"
           >
             About Me
           </NavLink>
           <NavLink 
             to="/contact"
-            className="navlink serif"
+            className="navlink mono"
           >
             Contact
           </NavLink>
