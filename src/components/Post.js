@@ -24,52 +24,51 @@ export default function Post() {
       .catch(console.error);
   }, []);
   return (
-    <main className="projects-bg">
+    <main className="main-format">
       <img 
         src={ image }
         alt="Crystal Palace Bowl"
-        className="projects-bg"
+        className="bg-img"
       />
-      <div className="bg-layer twilight"></div>
-      <section className="blog-section">
-        <h1 className="blogs-title cursive">
-          Blog Posts Page
-        </h1>
-        <div className="blogs-desc-div">
-        <h2 className="blogs-desc mono">
-          Welcome to my brand new blog
-        </h2>
-        </div>
-        <section>
-        <div className="blog-posts-div">
-          { postData && postData.map((post, index) => (
-            <article>
-              <Link 
-                to={"/post/" + post.slug.current} 
-                key={post.slug.current}
-              >
-                <span 
-                  className="blog-post"
-                  key={index}
+      <div className="bg-layer dawn"></div>
+      <div className="content-shell">
+        <section className="blog-section">
+          <h1 className="blogs-title mono-title">
+            Blog Posts Page
+          </h1>
+          <div className="blogs-desc-div">
+          <h2 className="blogs-desc mono">
+            Welcome to my brand new blog
+          </h2>
+          </div>
+          <div className="blog-posts-div">
+            { postData && postData.map((post, index) => (
+              <article>
+                <Link 
+                  to={"/post/" + post.slug.current} 
+                  key={post.slug.current}
                 >
-                  <img 
-                    src={post.mainImage.asset.url}
-                    alt={post.mainImage.alt}
-                    className="blog-post-image"
-                  />
-                  <span className="blog-title-container">
-                    <h3 className="blog-title mono">
-                      { post.title }
-                    </h3>
+                  <span 
+                    className="blog-post"
+                    key={index}
+                  >
+                    <img 
+                      src={post.mainImage.asset.url}
+                      alt={post.mainImage.alt}
+                      className="blog-post-image"
+                    />
+                    <span className="blog-title-container">
+                      <h3 className="blog-title mono">
+                        { post.title }
+                      </h3>
+                    </span>
                   </span>
-                </span>
-              </Link>
-            </article>
-          ))}
-        </div>
+                </Link>
+              </article>
+            ))}
+          </div>
         </section>
-          
-      </section>
+      </div>
     </main>
   )
 }

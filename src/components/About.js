@@ -28,15 +28,15 @@ export default function About() {
   if (!author) return <div>Loading...</div>;
 
   return (
-    <main className="bg">
+    <main className="main-format">
       <img 
         src={ palaceBowl }
         alt="Crystal Palace Bowl"
-        className="about-bg"
+        className="bg-img"
       />
       <div className="bg-layer winter">
       </div>
-      <div className="about-div">
+      <div className="content-shell">
         <section className="about-container">
           <img 
             src={ urlFor(author.authorImage).url() }
@@ -51,11 +51,11 @@ export default function About() {
               </span>
             </h1>
             <div className="about-bio prose mono">
-              <BlockContent
-                blocks={ author.bio }
-                projectId="k3nabdae"
-                dataset="production"
-              />
+            <BlockContent
+              blocks={ author.bio }
+              projectId="k3nabdae"
+              dataset="production"
+            />
             </div>
           </div>
         </section>

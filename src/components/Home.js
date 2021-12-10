@@ -8,12 +8,12 @@ export default function Home() {
       <img 
         src={image} 
         alt="Crystal Palace Bowl" 
-        className="home-bg"
+        className="bg-img"
       />
       <div className="bg-layer spring"></div>
       <section className="home-title">
-        <h1 className="home-title-text cursive">
-          Hey. I'm Nick
+        <h1 className="home-title-text mono-title">
+          Welcome To My Site
         </h1>
       </section>
       <div className="type-div">

@@ -22,16 +22,16 @@ export default function Project() {
   }, []);
 
   return (
-    <main className="projects-bg">
+    <main className="main-format">
       <img 
         src={image} 
         alt="Crystal Palace Door"
-        className="projects-bg" 
+        className="bg-img" 
       />
       <div className="bg-layer autumn">
       </div>
-      <section className="projects-section">
-        <h1 className="projects-title cursive">
+      <div className="content-shell">
+        <h1 className="projects-title mono-title">
           Welcome To My Projects Page
         </h1>
         <div className="projects-desc-div">
@@ -82,7 +82,7 @@ export default function Project() {
           </article>
           ))}
         </section>
-      </section>
+      </div>
     </main>
   )
 }
