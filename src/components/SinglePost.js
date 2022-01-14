@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url"; 
 import BlockContent from "@sanity/block-content-to-react";
+import image from "./palace-bowl.jpeg";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -37,12 +38,20 @@ export default function SinglePost() {
   if (!singlePost) return <div>Loading...</div>;
   
   return (
-    <main className="post-bg">
+    <main>
+      <img 
+        src={image}
+        className="bg-img"
+        alt="Crystal Palace Bowl" 
+      />
+      <div className="bg-layer summer"></div>
+      <div className="content-shell2">
+
       <article className="post-text-container">
         <header className="post-header">
           <div className="post-div">
             <div className="post-title-div">
-              <h1 className="post-title-text cursive">
+              <h1 className="post-title-text mono-title">
                 { singlePost.title }
               </h1> 
               <div className="author-div">
@@ -51,7 +60,7 @@ export default function SinglePost() {
                   alt={ singlePost.name }
                   className="author-thumbnail"
                 />
-                <p className="author-name cursive">
+                <p className="author-name mono-title">
                   { singlePost.name }
                 </p>
               </div>
@@ -64,12 +73,13 @@ export default function SinglePost() {
             style={{ height: "400px" }}
           />
         </header>
-        <div className="post-body-text standard prose">
+        <div className="post-body-text">
           <BlockContent 
             blocks={ singlePost.body }
           />
         </div>
       </article>
+      </div>
     </main>
   )
 }

@@ -4,36 +4,38 @@ import { SocialIcon } from "react-social-icons";
 import { FiMenu } from "react-icons/fi";
 import { AiOutlineCloseSquare } from "react-icons/ai";
 import DropdownMenu from "./DropdownMenu";
+import ToggleSwitch from "./ToggleSwitch";
 
-export default function NavBar() {  
+const NavBar = () => {  
+  const closeDropdown = () => { setMenuOpen(false) };
+  
   const [ menuOpen, setMenuOpen ] = useState(false);
 
   const hamburgerIcon = 
-  <FiMenu 
-    className="hamburger"
-    size="45px"
-    onClick={() => setMenuOpen(!menuOpen)}
-  />;
+    <FiMenu 
+      className="hamburger"
+      size="55px"
+      onClick={() => setMenuOpen(!menuOpen)}
+    />;
 
   const closeIcon = 
     <AiOutlineCloseSquare 
       className="close"
-      size="45px"
+      size="55px"
       onClick={() => setMenuOpen(!menuOpen)}
-    />; 
-
-  const closeDropdown = () => setMenuOpen(false);
-
+    />;
   return (
-    <header className="nav-main">
+    <header 
+      className="nav-main dark-mode"
+    >
       <div className="nav-container">
         <nav className="nav-large">
           <NavLink 
             to='/' 
             exact
-            className="navlink-src cursive"
+            className="navlink-src mono-title"
           >
-            KayPee
+            HOME
           </NavLink>
           <NavLink 
             to="/post"
@@ -64,32 +66,37 @@ export default function NavBar() {
           <NavLink 
             to='/' 
             exact
-            className="navlink-src cursive"
+            className="navlink-src mono-title"
           >
-            KayPee
+            HOME
           </NavLink>
           { menuOpen ? closeIcon : hamburgerIcon }
           { menuOpen && DropdownMenu }
         </nav>
+        <ToggleSwitch />  
         <div className="nav-social">
           <SocialIcon 
             url="https://www.linkedin.com/in/nickwhitedev/" 
-            className="icon mr-4" 
+            className="icon mr-4"
             target="_blank" 
-            fgColor="#fff" style={{ height: 35, width: 35 }}
+            fgColor="#fff" style={{ height: 45, width: 45 }}
           />
           <SocialIcon 
             url="https://github.com/KaePistachio" 
             className="icon mr-4" 
             target="_blank" 
-            fgColor="#fff" style={{ height: 35, width: 35 }}
+            fgColor="#fff" style={{ height: 45, width: 45 }}
           />
         </div>
       </div>
-      { menuOpen && <DropdownMenu
-                      isMobile={true}
-                      closeDropdown={closeDropdown}
-                    /> }
+      <div className="drop" >
+          { menuOpen && <DropdownMenu
+            isMobile={true}
+            closeDropdown={closeDropdown}
+          /> }
+    </div>
     </header>
-  )
+    )
 }
+
+export default NavBar;

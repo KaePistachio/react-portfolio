@@ -20,7 +20,7 @@ const ContactMe = () => {
   };
 
   return (
-    <main className="main-format">
+    <main className="main-format dark-mode">
       <img 
         className="bg-img"
         src={image}

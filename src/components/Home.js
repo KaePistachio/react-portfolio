@@ -4,7 +4,7 @@ import image from "./palace-bowl.jpeg";
 
 export default function Home() {
   return (
-    <main>
+    <main className="dark-mode">
       <img 
         src={image} 
         alt="Crystal Palace Bowl" 
