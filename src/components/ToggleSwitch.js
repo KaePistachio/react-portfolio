@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+import DarkModeContext from "../context/isDarkContext";
 
-const ToggleSwitch = ({
-  toggleTheme,
-  isChecked 
-}) => {
+
+
+const ToggleSwitch = () => {
+  const { setIsDark } = useContext(DarkModeContext);
 
   return (
     <div className="theme-switch-wrapper">
-      <label className="theme-switch" for="checkbox">
+      <label className="theme-switch" htmlFor="checkbox">
       <input 
-        onChange={toggleTheme}
-        isChecked={isChecked}
+        onChange={ (e) => setIsDark(e.target.checked) }
         type="checkbox" 
         id="checkbox" />
       <div className="slider round"></div>

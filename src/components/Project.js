@@ -41,7 +41,10 @@ export default function Project() {
         </div>
         <section className="projects-grid">
           { projectData && projectData.map((project, index) => (
-          <article className="project-article">
+          <article 
+            className="project-article"
+            key={index}
+          >
             <h3 className="project-title cursive">
               <a
                 href={project.link}

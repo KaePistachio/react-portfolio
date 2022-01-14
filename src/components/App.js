@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
@@ -7,31 +7,28 @@ import Post from "./Post";
 import Project from "./Project";
 import NavBar from "./NavBar";
 import ContactMe from "./ContactMe";
-
-const DarkModeContext = createContext();
-
-function DarkModeProvider({children}) {
-  const [ isDark, setIsDark ] = useState(false);
-  
-  <DarkModeContext.Provider value={{ isDark, setIsDark }}>
-  </DarkModeContext.Provider >
-}
+import DarkModeContext from "../context/isDarkContext";
 
 function App() { 
+  const [isDark, setIsDark] = useState(false);
+  const darkValue = { isDark, setIsDark };
+
   return (
-    //<DarkModeProvider>
+    <DarkModeContext.Provider value={darkValue} >
+    <div className={isDark ? "dark-mode" : ""}>
     <Router>
-      <NavBar />
+      <NavBar isDark={isDark} />
       <Routes>
-        <Route path='/' element={ <Home /> } exact />
+        <Route path='/' element={ <Home /> } />
         <Route path='/about' element={ <About /> } />
         <Route path='/post/:slug' element={ <SinglePost /> } />
         <Route path='/post' element={ <Post /> } />
-        <Route path='/project' element={ <Project /> } exact />
-        <Route path='/contact' element={ <ContactMe /> } exact />
+        <Route path='/project' element={ <Project /> } />
+        <Route path='/contact' element={ <ContactMe /> } />
       </Routes>
     </Router>
-    //</DarkModeProvider>
+    </div>
+    </DarkModeContext.Provider>
   );
 }
 

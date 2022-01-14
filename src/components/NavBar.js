@@ -26,13 +26,12 @@ const NavBar = () => {
     />;
   return (
     <header 
-      className="nav-main dark-mode"
+      className="nav-main"
     >
       <div className="nav-container">
         <nav className="nav-large">
           <NavLink 
             to='/' 
-            exact
             className="navlink-src mono-title"
           >
             HOME
@@ -65,7 +64,6 @@ const NavBar = () => {
         <nav className="nav-small">
           <NavLink 
             to='/' 
-            exact
             className="navlink-src mono-title"
           >
             HOME
