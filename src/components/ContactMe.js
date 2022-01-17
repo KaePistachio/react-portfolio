@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
 import image from "./palace-bowl.jpeg";
 
@@ -6,8 +7,15 @@ const ContactMe = () => {
   const serviceId = "nwdevpassthrough";
   const templateId = "template_ac7lagu";
   const userId = "user_j4c0V4ZrBMna5X9uxYFo5";
+  const navigate = useNavigate();
+  const [ isSubmitting, setIsSubmitting ] = useState("Submit >>>")
 
   const sendEmail = (e) => {
+    const myInterval = setInterval(setSubmit, 500);
+      function setSubmit() {
+        setIsSubmitting("Sending Email.");
+        setTimeout(() => setIsSubmitting("Sending Email.."), 100);
+        setTimeout(() => setIsSubmitting("Sending Email..."), 200); }
     console.log("sending email")
     e.preventDefault();
 
@@ -16,7 +24,13 @@ const ContactMe = () => {
           console.log(result.text);
       }, (error) => {
           console.log(error.text);
-      });
+      })
+    
+    if(emailjs.sendForm) {
+      setTimeout(() => clearInterval(myInterval), 1000);
+      setTimeout(() => setIsSubmitting("Redirecting..."), 1500);
+      setTimeout(() => navigate("/"), 2000);
+    };
   };
 
   return (
@@ -93,7 +107,7 @@ const ContactMe = () => {
         <button 
           type="submit"
           className="contact-button">
-          {`Submit >>>`}
+          {isSubmitting}
         </button>
         </div>
       </form>

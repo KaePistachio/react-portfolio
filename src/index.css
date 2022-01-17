@@ -801,24 +801,31 @@ input:checked + .slider:before {
   margin-top: 3rem;
   margin-left: 5rem;
   margin-right: 5rem;
-  padding: 4rem;
+  padding: 3rem;
   background-color: var(--bg-primary); 
   border-radius: 8px; 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .about-img {
+  display: block;
   border-radius: 100%;
-  width: 16rem;
-  width: 16rem;
-  margin-right: 5rem;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  margin-right: 3rem;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bio-div {
-  display: inline-flex;
+  display: inline;
+  justify-self: right;
   justify-content: left;
   flex-direction: column;
   padding: 1rem;
+  margin-left: auto;
   background-color: var(--bg-light);
 }
 

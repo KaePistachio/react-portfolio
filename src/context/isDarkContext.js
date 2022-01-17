@@ -2,7 +2,7 @@ import { createContext } from "react";
 
 const DarkModeContext = createContext({
   isDark: false,
-  setIsDark: () => {}
+  setIsDark: () => {},
 });
 
 export default DarkModeContext;
