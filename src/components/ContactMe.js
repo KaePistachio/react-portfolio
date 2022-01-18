@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
-import image from "./palace-bowl.jpeg";
+import image from "../images/palace-bowl.jpeg";
 
 const ContactMe = () => {
   const serviceId = "nwdevpassthrough";

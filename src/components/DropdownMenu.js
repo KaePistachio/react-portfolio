@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const DropdownMenu = (props) => {
@@ -21,7 +22,9 @@ const DropdownMenu = (props) => {
           onClick={() => props.isMobile && props.closeDropdown()}
           className="nav-li mono"
         >
-          <a href="/post">Blog Posts</a>
+          <NavLink to="/post" >
+            Blog Posts
+          </NavLink>
         </motion.li>
         <motion.li 
           initial={animateFrom}
@@ -30,7 +33,9 @@ const DropdownMenu = (props) => {
           onClick={() => props.isMobile && props.closeDropdown()}
           className="nav-li mono"
         >
-          <a href="/project">Projects</a>
+          <NavLink to="/project">
+            Projects
+          </NavLink>
         </motion.li>
         <motion.li 
           initial={animateFrom}
@@ -39,7 +44,9 @@ const DropdownMenu = (props) => {
           onClick={() => props.isMobile && props.closeDropdown()}
           className="nav-li mono"
         >
-          <a href="/about">About Me</a>
+          <NavLink to="/about">
+            About Me
+          </NavLink>
         </motion.li>
         <motion.li 
           initial={animateFrom}
@@ -48,7 +55,9 @@ const DropdownMenu = (props) => {
           onClick={() => props.isMobile && props.closeDropdown()}
           className="nav-li mono"
         >
-          <a href="/contact">Contact</a>
+          <NavLink to="/contact">
+            Contact
+          </NavLink>
         </motion.li>
       </ul>
     </nav>

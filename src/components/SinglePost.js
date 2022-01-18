@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url"; 
 import BlockContent from "@sanity/block-content-to-react";
-import image from "./palace-bowl.jpeg";
+import image from "../images/palace-bowl.jpeg";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {

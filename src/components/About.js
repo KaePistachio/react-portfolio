@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import sanityClient from "../client.js";
-import palaceBowl from "./palace-bowl.jpeg";
+import palaceBowl from "../images/palace-bowl.jpeg";
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url"; 
 

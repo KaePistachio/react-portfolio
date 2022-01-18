@@ -10,6 +10,7 @@
   --bg-primary: #ffd2d1;
   --bg-light: #fae0e0;
   --bg-alt: #a1ecff;
+  --type-fx: #fae0e0;
   --contact-hover: #70234a;
   --contact-text: #313131;
   --bg-transparent: rgba(22, 141, 170, 0.5);
@@ -28,14 +29,16 @@
   --bg-primary: #282828;
   --bg-light: #313131;
   --bg-alt: #CFFFF4;
+  --type-fx: #e9e9e9;
   --contact-hover: #CFFFF4;
-  --contact-text: #313131;
+  --contact-text: #e9e9e9;
   --bg-transparent: rgba(48, 48, 48, 0.541);
   --transparency: 45%;
   --icon-border: 1px solid #EFF;
   --box-shadow: -1px -1px 5px rgba(239, 197, 255, 0.445), 1px -1px 5px rgba(239, 197, 255, 0.445), -1px 1px 5px rgba(239, 197, 255, 0.445), 1px 1px 5px rgba(239, 197, 255, 0.445);
   --box-shadow-hover: -1px -1px 10px rgba(239, 197, 255, 0.445), 1px -1px 10px rgba(239, 197, 255, 0.445), -1px 1px 10px rgba(239, 197, 255, 0.445), 1px 1px 10px rgba(239, 197, 255, 0.445);
 }
+
 
 .cursive {
   font-family: "Yuji Syuku", sans-serif;
@@ -138,6 +141,7 @@
   width: 100%;
   z-index: 2;
   height: 6.5rem;
+  transition: background-color 1.5s, color 1.5s;
 }
 
 .nav-container {
@@ -159,13 +163,13 @@
   font-weight: bold; 
   letter-spacing: 0.1rem;
   text-shadow: -1px -1px 0 var(--bg-primary), 1px -1px 0 var(--bg-primary), -1px 1px 0 var(--bg-primary), 1px 1px 0 var(--bg-primary);
-  transition-duration: 0.25s;
+  transition: color 1.5s, text-shadow 1.5s;
 }
 
 .navlink-src:hover {
   color: var(--title-hover);
   text-shadow: -1px -1px 0px var(--outline-border), 1px -1px 0px var(--outline-border), -1px 1px 0px var(--outline-border), 1px 1px 0px var(--outline-border);
-  transition-duration: 0.25s;
+  transition-duration: 0.2s;
 }
 
 .nav-small {
@@ -185,7 +189,8 @@
   text-align: left;
   border-top: 0.12rem solid var(--bg-primary);
   padding-top: 0.2rem;
-  transition: color 0.5s, border 2s;
+  transition: color 1.5s;
+  transition: color 0.5s, border 1.5s;
 }
 
 .navlink:hover {
@@ -386,6 +391,7 @@ input:checked + .slider:before {
   justify-content: center;
   min-height: screen;
   padding: 5rem 2rem 0 2rem;
+  
 }
 
 .home-title-text {
@@ -396,6 +402,7 @@ input:checked + .slider:before {
   color: var(--title-hover);
   display: flex;
   line-height: 1.375;
+  transition: color 1.5s;
 }
 
 .type-div {
@@ -412,8 +419,9 @@ input:checked + .slider:before {
   border-radius: 5px;
   font-size: 2.5rem;
   text-align: right;
-  color: var(--bg-light);
+  color: var(--type-fx);
   padding: 0rem 1rem;
+  transition: 1.5s;
 }
 
 /****** Blog Posts ******/
@@ -450,7 +458,7 @@ input:checked + .slider:before {
   display: flex;
   background-color: var(--bg-transparent);
   font-size: 1.2rem;
-  color: var(--bg-light); 
+  color: var(--type-fx); 
   justify-content: center;  
   padding: 0.25rem;
   margin-top: 1rem;
@@ -669,7 +677,7 @@ input:checked + .slider:before {
   display: flex;
   background-color: var(--bg-transparent);
   font-size: 1.2rem;
-  color: var(--bg-light); 
+  color: var(--type-fx); 
   justify-content: center;
   padding: 0.25rem;
   margin-top: 1rem;

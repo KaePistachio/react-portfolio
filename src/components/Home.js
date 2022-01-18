@@ -1,6 +1,6 @@
 import React from "react";
 import Typed from "react-typed";
-import image from "./palace-bowl.jpeg";
+import image from "../images/palace-bowl.jpeg";
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
       <div className="type-div">
         <Typed
           className="type-fx mono-title"
-          strings={["Aspiring Web Dev", "Guitar Hero", "Mortal Kombat Champion"]}
+          strings={["Front-End Developer", "Javascript", "React", "Single Page Applications", "Wordpress", "jQuery", "Next.js"]}
           loop
         />
       </div>

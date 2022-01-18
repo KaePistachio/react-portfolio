@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import sanityClient from "../client.js";
-import image from "./palace-bowl.jpeg";
+import image from "../images/palace-bowl.jpeg";
 
 export default function Project() {
   const [ projectData, setProjectData ] = useState(null);
