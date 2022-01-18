@@ -5,6 +5,12 @@ import DarkModeContext from "../context/isDarkContext";
 
 const ToggleSwitch = () => {
   const { setIsDark } = useContext(DarkModeContext);
+  //const darkStore = localStorage.getItem('isDark');
+
+  /*const handleToggle = (e) => {
+    setIsDark(e.target.checked);
+    localStorage.setItem('isDark', )
+  }*/
 
   return (
     <div className="theme-switch-wrapper">

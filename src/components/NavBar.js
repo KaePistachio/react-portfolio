@@ -14,14 +14,14 @@ const NavBar = () => {
   const hamburgerIcon = 
     <FiMenu 
       className="hamburger"
-      size="55px"
+      //size="35px"
       onClick={() => setMenuOpen(!menuOpen)}
     />;
 
   const closeIcon = 
     <AiOutlineCloseSquare 
       className="close"
-      size="55px"
+      //size="35px"
       onClick={() => setMenuOpen(!menuOpen)}
     />;
   return (
@@ -75,15 +75,15 @@ const NavBar = () => {
         <div className="nav-social">
           <SocialIcon 
             url="https://www.linkedin.com/in/nickwhitedev/" 
-            className="icon mr-4"
+            className="icon"
             target="_blank" 
-            fgColor="#fff" style={{ height: 45, width: 45 }}
+            fgColor="#fff"
           />
           <SocialIcon 
             url="https://github.com/KaePistachio" 
-            className="icon mr-4" 
+            className="icon" 
             target="_blank" 
-            fgColor="#fff" style={{ height: 45, width: 45 }}
+            fgColor="#fff"
           />
         </div>
       </div>

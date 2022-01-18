@@ -99,6 +99,22 @@
   height: 100%;
 }
 
+@media (max-width: 1000px) and (orientation: portrait) {
+  .bg-img {
+    display: flex;
+    min-width: 250%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 400px) and (orientation: portrait) {
+  .bg-img {
+    display: flex;
+    min-width: 300%;
+    height: 100%;
+  }
+}
+
 .bg-layer {
   display: flex;
   position: fixed;
@@ -235,6 +251,7 @@
 
 .theme-switch-wrapper p {
   font-family: "Source Code Pro", monospace;
+  padding-top: none;
   color: var(--title-hover);
   font-size: 0.7rem;
 }
@@ -289,10 +306,14 @@ input:checked + .slider:before {
 }
 
 
-
-/****** NavBar Mobile ******/
+/****** NavBar Tablet ******/
 
 @media (max-width: 970px) {
+
+  .nav-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   
   .nav-large {
     display: none;
@@ -305,15 +326,20 @@ input:checked + .slider:before {
   .hamburger {
     display: inline-flex;
     color: var(--title-main);
-    margin-top: 2.2rem;
+    width: 45px;
+    height: 45px;
+    margin-top: auto;
+    margin-bottom: auto;
     margin-left: 0.3rem;
     border: 1px solid var(--bg-primary);
     border-radius: 3px;
+    transition: 1.5s;
   }
 
   .hamburger:hover {
     border: 1px solid var(--title-main);
     border-radius: 3px;
+    transition: 0.25s;
   }
 
   .nav-li {
@@ -341,8 +367,11 @@ input:checked + .slider:before {
   .close {
     display: inline-flex;
     margin: auto;
+    width: 45px;
+    height: 45px;
     color: var(--title-main);
-    margin-top: 2.2rem;
+    margin-top: auto;
+    margin-bottom: auto;
     margin-left: 0.3rem;
   }
 
@@ -376,7 +405,46 @@ input:checked + .slider:before {
     padding-right: 2rem;
     margin-bottom: 0.2rem;
   }
+  
+  .icon {
+    max-height: 45px;
+    max-width: 45px;
+    margin-right: 1rem;
+  }
 } 
+
+/****** Navbar Mobile ******/
+
+@media (max-width: 400px) {
+  .nav-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem
+  }
+
+  .navlink-src {
+    font-size: 3.5rem;
+    margin-top: auto;
+    margin-bottom: auto;  
+    padding-right: 0.5rem;
+  }
+
+  .hamburger {
+    margin-left: none;
+    width: 35px;
+    height: 35px;
+  }
+
+  .close {
+    width: 35px;
+    height: 35px;
+  }
+    
+  .icon {
+    max-height: 30px;
+    max-width: 30px;
+    margin-right: 1rem;
+  }
+}
 
 /****** Home ******/
 
@@ -422,6 +490,24 @@ input:checked + .slider:before {
   color: var(--type-fx);
   padding: 0rem 1rem;
   transition: 1.5s;
+} 
+
+/****** Home Mobile ******/ 
+@media (max-width: 600px) {
+  .type-fx {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .home-title {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .type-fx {
+    font-size: 1.2rem;
+  }
 }
 
 /****** Blog Posts ******/
