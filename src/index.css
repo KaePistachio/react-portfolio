@@ -568,20 +568,19 @@ input:checked + .slider:before {
 
 .type-div {
   position: relative;
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: right;
   justify-content: right;
-  text-align: right;
   padding-top: 1.5rem;
 }
 
 .type-fx {
-  display: flex;
   background-color: var(--bg-transparent);
   border-radius: 5px;
   font-size: 2.5rem;
-  text-align: right;
-  justify-self: right;
   color: var(--type-fx);
+  margin-right: 4rem;
   padding: 0rem 1rem;
   transition: 1.5s;
 } 
