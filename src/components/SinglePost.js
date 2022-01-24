@@ -38,7 +38,7 @@ export default function SinglePost() {
   if (!singlePost) return <div>Loading...</div>;
   
   return (
-    <main>
+    <main className="main-format">
       <img 
         src={image}
         className="bg-img"

@@ -4,7 +4,7 @@ import image from "../images/palace-bowl.jpeg";
 
 export default function Home() {
   return (
-    <main>
+    <main className="main-format">
       <img 
         src={image} 
         alt="Crystal Palace Bowl" 
