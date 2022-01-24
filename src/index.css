@@ -155,7 +155,7 @@
   display: flex;
   position: fixed;
   background-color: var(--bg-primary);
-  width: 100%;
+  min-width: 100%;
   z-index: 2;
   height: 6.5rem;
   transition: background-color 1.5s, color 1.5s;
@@ -220,14 +220,14 @@
 .nav-social {
   justify-content: space-between;
   align-items: center;
-  display: inline; 
+  display: inline-    flex; 
 }
 
 .icon {
   border: var(--icon-border);
   border-radius: 100%;
   box-shadow: var(--box-shadow);
-  margin-right: 1.5rem;
+  margin-right: 1rem;
 }
 
 .icon:hover {
@@ -418,27 +418,23 @@ input:checked + .slider:before {
 
 /****** Navbar Mobile ******/
 
-@media (max-width: 400px) {
+@media (max-width: 560px) {
 
   .dropdown-container {
     width: 10rem;
   }
 
   .dropdown-menu {
-    padding-top: 1.3rem;
+    padding-top: 1.5rem;
   }
 
   .nav-li {
-    width: 7rem;
+    width: 7.4rem;
     font-size: 1rem;
     margin-left: 0.2rem;
-    padding-top: 0rem;
+    padding-top: 0.2rem;
     padding-bottom: 0.8rem;
   
-  }
-  .theme-switch-wrapper p {
-    font-size: 0.5rem;
-    text-align: center;
   }
 
   .nav-container {
@@ -450,20 +446,9 @@ input:checked + .slider:before {
     font-size: 3.5rem;
     margin-top: auto;
     margin-bottom: auto;  
-    padding-right: 0.5rem;
+    padding-right: 0rem;
   }
 
-  .hamburger {
-    margin-left: none;
-    width: 35px;
-    height: 35px;
-  }
-
-  .close {
-    width: 35px;
-    height: 35px;
-  }
-    
   .icon {
     max-height: 30px;
     max-width: 30px;
@@ -473,6 +458,84 @@ input:checked + .slider:before {
   .dropdown-container {
     transition-duration: 0.5s;
     transition: background-color 1.5s;
+  }
+
+  .hamburger {
+    margin-top: 1.75rem;
+    margin-left: 0.5rem;
+    width: 32px;
+    height: 32px;
+  }
+
+  .close {
+    margin-top: 1.74rem;
+    margin-left: 0.4rem;
+    width: 32px;
+    height: 32px;
+  }
+
+  .theme-switch-wrapper p {
+    font-size: 0.5rem;
+    text-align: center;
+  }
+
+  .theme-switch {
+    display: inline-block;
+    height: 28px;
+    position: relative;
+    width: 50px;
+  }
+   
+  .slider::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px);
+  }
+  
+}
+
+@media (max-width: 360px) {
+  .nav-main {
+    height: 4.5rem;
+  }
+  .navlink-src {
+    font-size: 2.5rem ;
+  }
+
+  .nav-social {
+    
+    display: inline-flex;
+    flex-direction: row;
+  }
+
+  .icon { 
+    max-height: 23px;
+    max-width: 23px;
+    margin-right: 0.5rem;
+  }
+
+  .theme-switch-wrapper p {
+    font-size: 0.43rem;
+    text-align: center;
+  }
+
+  .theme-switch {
+    display: inline-block;
+    height: 22px;
+    position: relative;
+    width: 40px;
+  }
+   
+  .slider::before {
+    width: 14px;
+    height: 14px;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(18px);
   }
 }
 
@@ -522,10 +585,21 @@ input:checked + .slider:before {
   transition: 1.5s;
 } 
 
+
+
 /****** Home Mobile ******/ 
 @media (max-width: 600px) {
   .type-fx {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
+  }
+
+  .home-title-text {
+    text-shadow: 2px 2px var(--bg-alt);
+  }
+
+  .home-title {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -972,6 +1046,8 @@ input:checked + .slider:before {
     width: 10rem;
     height: 10rem;
     margin: 1rem;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
   }
   .bio-div {
     margin-left: auto;
@@ -1024,6 +1100,14 @@ input:checked + .slider:before {
   }
   .bio-title {
     font-size: 1.5rem;
+  }
+
+  .about-img {
+    width: 10rem;
+    height: 10rem;
+    margin: 1rem;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
   }
 
   .about-bio {

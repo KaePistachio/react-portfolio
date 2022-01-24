@@ -1,32 +1,8 @@
-import React, { useEffect, useState } from "react";
-import sanityClient from "../client.js";
+import React from "react";
 import palaceBowl from "../images/palace-bowl.jpeg";
-import BlockContent from "@sanity/block-content-to-react";
-import imageUrlBuilder from "@sanity/image-url"; 
-
-const builder = imageUrlBuilder(sanityClient);
-function urlFor(source) {
-  return builder.image(source);
-}
+import bio from "../images/bio.jpeg"; 
 
 export default function About() {
-  const [ author, setAuthor ] = useState(null);
-  
-  useEffect(() => {
-    sanityClient
-      .fetch(
-        `*[_type == "author"]{
-          name,
-          bio,
-          "authorImage": image.asset->url
-        }`
-    )
-      .then((data) => setAuthor(data[0]))
-      .catch(console.error);
-  }, [])
-
-  if (!author) return <div>Loading...</div>;
-
   return (
     <main className="main-format">
       <img 
@@ -39,24 +15,36 @@ export default function About() {
       <div className="content-shell">
         <section className="about-container">
           <img 
-            src={ urlFor(author.authorImage).url() }
-            alt={ author.name }
+            src={ bio }
+            alt="me"
             className="about-img"
           />
           <div className="bio-div">
             <h1 className="bio-title mono-title"> 
-              Hey there, I'm{" "}
-              <span>
-                { author.name }
-              </span>
+              Hey there, I'm Nick
             </h1>
-            <div className="about-bio prose mono">
-            <BlockContent
-              blocks={ author.bio }
-              projectId="k3nabdae"
-              dataset="production"
-            />
-            </div>
+
+            {<div className="about-bio prose mono">
+            At the start of the global pandemic I chose to rethink my career path. 
+            Having come from a background in music and audio, 
+            I knew my future would not be secure where the majority of my work 
+            came from events work and live sound.<br/><br/>
+            I have been studying web development for some time and have completed
+            multiple courses on Codecademy as well as many other resources from 
+            across the web including udemy. My passion for coding has grown as 
+            I learn more every day and am sure I am currently at a level where 
+            I could confidently step into a junior front-end role and meet if not surpass expectations.<br/><br/>
+            As I completed the full stack course on Codecademy I do have some familiarity across the entire stack, 
+            with a working knowledge of mySQL, PHP, Python {`&`} Data Structures. 
+            My main focus however has been on developing an in depth understanding 
+            of the fundamentals of HTML/CSS, and have put most my time into both 
+            vanilla JS and React / JSX. My ideal starting role would be as a junior 
+            React dev, but am open to any role on the front end where I can learn 
+            on the job and be mentored to becoming a highly valued asset in the field.<br/><br/>
+            I have many years of work experience in various roles that dealt with high pressure, 
+            customer facing and micro management. And I am certain that I possess a wide variety 
+            necessary soft skills to rapidly assimilate myself within any work force.
+            </div>}
           </div>
         </section>
       </div>
