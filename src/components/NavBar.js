@@ -37,22 +37,22 @@ const NavBar = () => {
             HOME
           </NavLink>
           <NavLink 
-            to="/post"
+            to="/about"
             className="navlink mono"
           >
-            Blog Posts
+            About Me
           </NavLink>
           <NavLink 
             to="/project"
             className="navlink mono"
           >
-            Projects
+            Portfolio
           </NavLink>
           <NavLink 
-            to="/about"
+            to="/post"
             className="navlink mono"
           >
-            About Me
+            Personal
           </NavLink>
           <NavLink 
             to="/contact"
