@@ -22,8 +22,8 @@ const DropdownMenu = (props) => {
           onClick={() => props.isMobile && props.closeDropdown()}
           className="nav-li mono"
         >
-          <NavLink to="/post" >
-            Blog Posts
+          <NavLink to="/about" >
+            About Me
           </NavLink>
         </motion.li>
         <motion.li 
@@ -34,7 +34,7 @@ const DropdownMenu = (props) => {
           className="nav-li mono"
         >
           <NavLink to="/project">
-            Projects
+            Portfolio
           </NavLink>
         </motion.li>
         <motion.li 
@@ -44,8 +44,8 @@ const DropdownMenu = (props) => {
           onClick={() => props.isMobile && props.closeDropdown()}
           className="nav-li mono"
         >
-          <NavLink to="/about">
-            About Me
+          <NavLink to="/post">
+            Personal
           </NavLink>
         </motion.li>
         <motion.li 

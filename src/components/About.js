@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import palaceBowl from "../images/palace-bowl.jpeg";
-import bio1 from "../images/bio.jpeg"; 
-import bio2 from "../images/yoghurt.jpeg";
-import bio3 from "../images/guitar.jpeg";
+import bio1 from "../images/swiss.png"; 
+import bio2 from "../images/bio.jpeg";
+import bio3 from "../images/guitar.png";
+
+
 
 export default function About() {
   const images = [bio1, bio2, bio3];
-  const [currentIndex, setCurrentIndex] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const intervalId = setInterval(() => {

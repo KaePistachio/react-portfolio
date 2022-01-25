@@ -23,7 +23,7 @@ export default function Project() {
         <div className="projects-container">
           <h2 className="projects-desc mono">
             Below is a list of some of the portfolio projects I have completed, as well as information on 
-            any freelance work I have managed to undertake so far.
+            any freelance work I have undertaken so far.
           </h2>
           <article  
             className="project-summary"
