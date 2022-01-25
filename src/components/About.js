@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import palaceBowl from "../images/palace-bowl.jpeg";
-import bio from "../images/bio.jpeg"; 
+import bio1 from "../images/bio.jpeg"; 
+import bio2 from "../images/yoghurt.jpeg";
+import bio3 from "../images/guitar.jpeg";
 
 export default function About() {
+  const images = [bio1, bio2, bio3];
+  const [currentIndex, setCurrentIndex] = useState(1);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+        if(currentIndex === images.length - 1) {
+            setCurrentIndex(0);
+        } 
+        else {
+             setCurrentIndex(currentIndex + 1);
+        }
+    }, 3000)
+    
+    return () => clearInterval(intervalId);
+})
+
   return (
     <main className="main-format">
       <img 
@@ -15,7 +33,7 @@ export default function About() {
       <div className="content-shell">
         <section className="about-container">
           <img 
-            src={ bio }
+            src={ images[currentIndex] }
             alt="me"
             className="about-img"
           />

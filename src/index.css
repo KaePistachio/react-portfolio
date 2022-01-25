@@ -126,26 +126,31 @@
 .autumn {
   background-image: linear-gradient(to bottom right, rgb(245, 87, 39), rgb(20, 110, 73));
   opacity: var(--transparency);
+  transition: 1.5s;
 }
 
 .winter {
   background-image: linear-gradient(to bottom right, rgb(142, 69, 226), rgb(41, 219, 166) );
   opacity: var(--transparency);
+  transition: 1.5s;
 }
 
 .summer {
   background-image: linear-gradient(to bottom right, rgb(22, 167, 252), rgb(231, 213, 45));
   opacity: var(--transparency);
+  transition: 1.5s;
 }
 
 .spring {
   background-image: linear-gradient(to bottom right, rgb(79, 220, 255), rgb(255, 166, 1));
   opacity: var(--transparency);
+  transition: 1.5s;
 }
 
 .dawn {
   background-image: linear-gradient(to bottom right, rgb(193, 241, 255), rgb(0, 38, 141));
   opacity: var(--transparency);
+  transition: 1.5s;
 }
 
 
@@ -256,6 +261,7 @@
   padding-top: none;
   color: var(--title-hover);
   font-size: 0.7rem;
+  transition: 1.5s;
 }
 
 .theme-switch {
@@ -854,70 +860,120 @@ input:checked + .slider:before {
   text-shadow: -2px -2px 1px var(--bg-alt), 2px -2px 1px var(--bg-primary), -2px 2px 1px var(--bg-primary), 2px 2px 1px var(--bg-primary);
 }
 
-.projects-desc-div {
-  position: relative;
-  display: flex;
-  justify-content: right;
-  text-align: right;
-  margin-left: auto;
-  margin-right: auto;
+.projects-container {
+  display: grid;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  padding: 2rem;
+  background-color: var(--bg-primary); 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 1.5s;
 }
 
 .projects-desc {
   display: flex;
-  background-color: var(--bg-transparent);
+  background-color: var(--bg-primary);
   font-size: 1.2rem;
-  color: var(--type-fx); 
+  text-align: center  ;
+  color: var(--title-main); 
   justify-content: center;
   padding: 0.25rem;
+  max-width: 70%;
   margin-top: 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   margin-left: auto;
   margin-right: auto;
 }
 
-.projects-grid {
+.project-summary {
   display: grid;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
-
-.project-article {
-  display: block;
-  align-items: space-between;
-  align-content: stretch;
-  justify-content: center;
-  border-radius: 10px; 
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 1fr 3fr;
+  flex-direction: column;
   background-color: var(--bg-light);
-  max-width: 400px;
-  height: 220px;
   padding: 1rem;
+  margin: 1rem;
+  border-radius: 5px;
 }
 
-.project-title {
+.navlink-project {
+  display: grid;
+  grid-column: 1 / span 1;
   color: var(--title-main);
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
-.project-title:hover {
+.navlink-project:hover {
   color: var(--title-hover);
 }
 
-.project-details {
+.project-blurb {
+  display: grid;
+  grid-row: 2 / span 1;
   justify-content: space-between;
-  align-items: center;
-  color: var(--outline-border);
-  font-size: 0.55rem ;
+  align-items: top;
+  color: var(--title-main);
+  font-size: 1rem ;
   margin-right: 1rem;
   margin-left: 0rem;
 }
+.thumb-container {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: auto;
+  display: block;
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 2;
+  transition: 1s;
+}
+
+.project-thumbnail {
+  object-fit: cover;
+  width: auto;
+  height: 100%;
+  display: block;
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 2;
+  transition: 1s;
+}
+
+.overlay {
+  display: flex;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  opacity: 0;
+  transition: .5s ease;
+  background-color: var(--bg-primary);
+}
+
+.thumblink-text {
+  color: var(--contact-hover);
+  font-size: 2rem;
+  text-align: center;
+  margin: auto;
+}
+
+.project-thumbnail:hover {
+  box-shadow: var(--box-shadow-hover);
+  transition: 0.2s;
+}
+
+.project-thumbnail:hover .overlay {
+  opacity: 0.7;
+}
+
+
 
 .project-span {
   margin-right: 10px;
@@ -950,6 +1006,11 @@ input:checked + .slider:before {
 /****** Projects Mobile ******/
 
 @media ( max-width: 1200px ) {
+  .projects-container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
   .projects-grid {
     grid-template-columns: auto auto;
   }
@@ -962,6 +1023,12 @@ input:checked + .slider:before {
 }
 
 @media ( max-width: 900px ) {
+
+  .projects-container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
   .projects-grid {
     grid-template-columns: auto;
   }
@@ -981,8 +1048,8 @@ input:checked + .slider:before {
   .projects-desc {
     display: flex;
     font-size: 0.9rem;
-    justify-content: center;
-    margin-bottom: 3rem;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
   }
 
   .project-article {
@@ -1003,6 +1070,7 @@ input:checked + .slider:before {
   background-color: var(--bg-primary); 
   border-radius: 8px; 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 1.5s;
 }
 
 .about-img {
@@ -1025,18 +1093,21 @@ input:checked + .slider:before {
   padding: 1rem;
   margin-left: 20px;
   background-color: var(--bg-light);
+  transition: 1.5s;
 }
 
 .bio-title {
   font-size: 4vw;
   color: var(--title-main);
   margin-bottom: 1rem;
+  transition: 1.5s;
 }
 
 .about-bio {
   text-align: left;
   color: var(--title-main);
   font-size: 1.2rem;
+  transition: 1.5s;
 }
 
 /****** About Mobile ******/
@@ -1125,16 +1196,19 @@ input:checked + .slider:before {
   margin-top: 3rem;
   margin-left: 8vw;
   margin-right: 8vw;
+  margin-bottom: 3rem;
   padding-bottom: 2rem;
   height: auto;
   border-radius: 15px;
   text-align: center;
+  transition: 1.5s;
 }
 
 .contact-header {
   padding-top: 1rem;
   font-size: 3rem;
   color: var(--title-main);
+  transition: color 1.5s;
 }
 
 .contact-desc {
@@ -1148,6 +1222,7 @@ input:checked + .slider:before {
   margin-right: auto;
   text-align: center;
   padding-bottom: 1.5rem;
+  transition: color 1.5s;
 }
 
 .contact-grid {
@@ -1167,6 +1242,7 @@ input:checked + .slider:before {
   border-bottom: 2px solid var(--bg-primary);
   min-width: 100px;
   size: 28;
+  transition: 1.5s;
  }
 
 .contact-input:focus {
@@ -1184,6 +1260,7 @@ input:checked + .slider:before {
   min-height: 170px;
   background-color: var(--bg-light);
   border-bottom: 2px solid var(--bg-primary);
+  transition: 1.5s;
  }
 
 .contact-body:focus {
@@ -1199,7 +1276,7 @@ input:checked + .slider:before {
   text-align: left;
   min-width: 100%;
   border-bottom: 2px solid var(--bg-primary);
-  transition: 0.5s;
+  transition: 1.5s;
 }
 
 .contact-button:hover {
@@ -1276,7 +1353,6 @@ input:checked + .slider:before {
   .contact-button {
     text-align: left;
     width: 70%;
-    transition: 0.5s;
   }
 
   .grid-5 {
