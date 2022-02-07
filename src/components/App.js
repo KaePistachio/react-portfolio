@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import SinglePost from "./SinglePost";
-import Post from "./Post";
 import Project from "./Project";
 import NavBar from "./NavBar";
 import ContactMe from "./ContactMe";
@@ -23,7 +22,6 @@ function App() {
         <Route path='/' element={ <Home /> } />
         <Route path='/about' element={ <About /> } />
         <Route path='/post/:slug' element={ <SinglePost /> } />
-        <Route path='/post' element={ <Post /> } />
         <Route path='/project' element={ <Project /> } />
         <Route path='/contact' element={ <ContactMe /> } />
       </Routes>
