@@ -49,12 +49,6 @@ const NavBar = () => {
             Portfolio
           </NavLink>
           <NavLink 
-            to="/post"
-            className="navlink mono"
-          >
-            Personal
-          </NavLink>
-          <NavLink 
             to="/contact"
             className="navlink mono"
           >
