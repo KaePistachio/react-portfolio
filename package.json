@@ -19,9 +19,7 @@
     "react-scripts": "4.0.3",
     "react-social-icons": "^5.6.1",
     "react-switch": "^6.0.0",
-    "react-tsparticles": "^1.37.3",
     "react-typed": "^1.2.0",
-    "react-youtube-playlist": "^2.2.8",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
