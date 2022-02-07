@@ -5,8 +5,6 @@ import thumb2 from "../images/beefy.png";
 import thumb3 from "../images/rock.png";
 
 export default function Project() {
-
-
   return (
     <main className="main-format">
       <img 
@@ -22,7 +20,7 @@ export default function Project() {
         </h1>
         <div className="projects-container">
           <h2 className="projects-desc mono">
-            Below is a list of some of the portfolio projects I have completed, as well as information on 
+            Below is a list of links to portfolio projects I have completed, as well as information on 
             any freelance work I have undertaken so far.
           </h2>
           <article  
@@ -40,7 +38,7 @@ export default function Project() {
               For this project I created an SPA for an online fish market that uses React to process orders, update information
               on inventory and prices of fish using global state backed up by Firebase.
             </p>
-            <div class='thumb-container'>
+            <div class="thumb-container">
             <a
               href="https://serene-rosalind-af5306.netlify.app/"
               target="_blank"
@@ -52,9 +50,9 @@ export default function Project() {
                 src={thumb}
                 alt="catch of the day"
               />
-                <div class="overlay">
-                  <div class="thumblink-text mono-title">Click To View Project</div>
-                </div>
+              <div class="overlay">
+                <div class="thumblink-text mono-title">Click To View Project</div>
+              </div>
             </a>
             </div>
           </article>
@@ -86,9 +84,9 @@ export default function Project() {
                 src={thumb2}
                 alt="catch of the day"
               />
-                <div class="overlay">
-                  <div class="thumblink-text mono-title">Click To View Project</div>
-                </div>
+              <div class="overlay">
+                <div class="thumblink-text mono-title">Click To View Project</div>
+              </div>
             </a>
             </div>
           </article>
@@ -108,7 +106,7 @@ export default function Project() {
               accessed through Wordpress automate the process of adding tutor information to a grid. This would ease use
               for the client and allow them to link through to a page with more details on each individual. 
             </p>
-            <div class='thumb-container'>
+            <div class="thumb-container">
             <a
               href="https://https://berkshire.therockproject.com/"
               target="_blank"
@@ -120,9 +118,9 @@ export default function Project() {
                 src={thumb3}
                 alt="catch of the day"
               />
-                <div class="overlay">
-                  <div class="thumblink-text mono-title">Click To View Project</div>
-                </div>
+              <div class="overlay">
+                <div class="thumblink-text mono-title">Click To View Project</div>
+              </div>
             </a>
             </div>
           </article>
