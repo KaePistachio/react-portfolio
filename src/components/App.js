@@ -9,8 +9,7 @@ import ContactMe from "./ContactMe";
 import DarkModeContext from "../context/isDarkContext";
 
 function App() { 
-  const darkBool = localStorage.getItem('isDark');
-  const [isDark, setIsDark] = useState(darkBool);
+  const [isDark, setIsDark] = useState(JSON.parse(localStorage.getItem('isDark')));
   const darkValue = { isDark, setIsDark };
 
   return (
