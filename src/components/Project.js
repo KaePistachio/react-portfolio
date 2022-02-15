@@ -1,7 +1,7 @@
 import React from "react";
 import image from "../images/palace-bowl.jpeg";
 import thumb from "../images/catch.png";
-import thumb2 from "../images/beefy.png";
+import thumb2 from "../images/foxy.png";
 import thumb3 from "../images/rock.png";
 
 export default function Project() {
@@ -65,7 +65,7 @@ export default function Project() {
               rel="noreferrer"
               className="navlink-project mono"
             >
-              The Beefy Blog {`>>>`}
+              The Fox Blog {`>>>`}
             </a>
             <p className="project-blurb mono">
               This was my first attempt at creating a simple CRUD application with react. I decided to create a blog page
