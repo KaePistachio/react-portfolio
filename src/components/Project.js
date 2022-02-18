@@ -27,20 +27,21 @@ export default function Project() {
             className="project-summary"
           >
             <a 
-              href="https://serene-rosalind-af5306.netlify.app/"
+              href="https://github.com/KaePistachio/react-portfolio"
               target="_blank"
               rel="noreferrer"
               className="navlink-project mono"
             >
-              Catch of the day {`>>>`}
+              My Portofolio Site {`>>>`}
             </a>
             <p className="project-blurb mono">
-              For this project I created an SPA for an online fish market that uses React to process orders, update information
-              on inventory and prices of fish using global state backed up by Firebase.
+              I created my site as part of my Portfolio using React {`&`} tailwind. 
+              I used this as an opportunity to explore React hooks and global state, as well as
+              the use of local storage for persistance of the dark mode feature.
             </p>
             <div class="thumb-container">
             <a
-              href="https://serene-rosalind-af5306.netlify.app/"
+              href="https://github.com/KaePistachio/react-portfolio"
               target="_blank"
               rel="noreferrer"
               className="project-thumbnail"
@@ -51,7 +52,7 @@ export default function Project() {
                 alt="catch of the day"
               />
               <div class="overlay">
-                <div class="thumblink-text mono-title">Click To View Project</div>
+                <div class="thumblink-text mono-title">Click To View Repo</div>
               </div>
             </a>
             </div>
